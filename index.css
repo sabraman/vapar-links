@@ -6,6 +6,7 @@ html {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -55,9 +56,6 @@ header > h1 {
   max-width: 640px;
   margin: 0 auto;
 }
-.video-container {
-  max-width: 640px;
-}
 h2 {
   font-size: 3em;
 }
@@ -100,7 +98,6 @@ ul > li > a {
   gap: 0.5em;
   padding: 1em;
   font-size: 1.5em;
-  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: white;
