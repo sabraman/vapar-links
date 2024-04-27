@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>VAPAR SHOP</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+<body>
+<p id="msg"></p>
+<script>
+  function changeText(currentOS) {
+    const elem = document.getElementById("msg");
+    elem.innerText = currentOS;
+  }
+
+  function redirectToApp() {
+    const userAgent =
+      navigator.userAgent || navigator.vendor || window.opera;
+
+    if (/android/i.test(userAgent)) {
+      changeText("android, открытие приложения, если нет, то в гугл плей");
+      const androidIntentURL =
+        "intent://com.getmeback.vshop#Intent;scheme=http;package=com.getmeback.vshop;end";
+
+      window.location.href = androidIntentURL;
+
+      setTimeout(() => {
+        window.location.href =
+          "https://play.google.com/store/apps/details?id=com.getmeback.vshop";
+      }, 1500);
+    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      changeText("ios, переход в wallet");
+      window.location.href = "https://vshop.getmeback.ru/wallet";
+    } else {
+        changeText("не распознано, переход на таплинк");
+        window.location.href = "./index.html";
+    }
+  }
+
+  // Call the function on page load
+  redirectToApp();
+</script>
+</body>
+</html>
