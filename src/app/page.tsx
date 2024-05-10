@@ -8,7 +8,6 @@ import {
     CarouselNext,
     Carousel,
 } from '@/components/ui/carousel';
-import VaparLogo from '@/components/VaparLogo';
 
 export default function Home() {
     return (
