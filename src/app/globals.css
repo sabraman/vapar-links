@@ -31,3 +31,6 @@ body {
     text-wrap: balance;
   }
 }
+article.yt-lite {
+  border-radius: 0.5rem !important;
+}

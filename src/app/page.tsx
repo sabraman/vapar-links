@@ -208,7 +208,7 @@ export default function Home() {
                     </p>
                     <div className="mx-auto mt-8 flex w-full flex-col items-center justify-center gap-4">
                         <AspectRatio ratio={16 / 9}>
-                            <Youtube id="qcTcIBhMtDY" title="Vapar Shop x VS Cofee x Аквачистка" />
+                            <Youtube id="qcTcIBhMtDY" title="Vapar Shop x VS Cofee x Аквачистка"/>
                         </AspectRatio>
                     </div>
                     <div className="mt-8 flex flex-col gap-4">
