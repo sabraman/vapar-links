@@ -8,6 +8,7 @@ import {
     CarouselNext,
     Carousel,
 } from '@/components/ui/carousel';
+import Youtube from '@/components/ui/Youtube';
 
 export default function Home() {
     return (
@@ -207,16 +208,7 @@ export default function Home() {
                     </p>
                     <div className="mx-auto mt-8 flex w-full flex-col items-center justify-center gap-4">
                         <AspectRatio ratio={16 / 9}>
-                            <iframe
-                                className="h-full w-full rounded-lg"
-                                loading="lazy"
-                                src="https://www.youtube.com/embed/qcTcIBhMtDY?si=hdIeB6i-0H5cLTIm"
-                                title="YouTube video player"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                allowFullScreen
-                            ></iframe>
+                            <Youtube id="qcTcIBhMtDY" title="Vapar Shop x VS Cofee x Аквачистка" />
                         </AspectRatio>
                     </div>
                     <div className="mt-8 flex flex-col gap-4">
