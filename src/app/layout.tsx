@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { Logo } from "./_components/logo";
+import { TopNav } from "./_components/topnav";
+
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -17,12 +20,13 @@ export const metadata: Metadata = {
     title: "Vapar Shop | Вейп Шоп",
     description: "Международная сеть дизайнерских вейп-шопов",
     siteName: "VAPAR SHOP",
-    images: '/favicon.svg',
+    images: '/og-image.png',
   },
   icons: {
     icon: "/favicon.svg",
-    apple: "/favicon.svg",
+    apple: "/apple-icon.png",
   }
+
 
 };
 
@@ -33,7 +37,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={montserrat.className}>{children}</body>
+      <head>
+        <meta name="yandex-verification" content="eaf2e22c2dc6f579" />
+      </head>
+      <body className={montserrat.className}>
+        <main className="flex min-h-screen flex-col items-center justify-center bg-gray-950 px-2 py-12">
+          <div className="space-y-18 w-full max-w-md items-center">
+            <Logo />
+            <TopNav />
+            {children}
+          </div>
+        </main>
+      </body>
     </html>
   );
 }
