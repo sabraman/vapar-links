@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from 'react';
 import Image from 'next/image';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import Link from 'next/link';
@@ -43,7 +44,12 @@ function redirectToApp() {
 
 // Call the function on page load
 export default function Home() {
-    redirectToApp();
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            redirectToApp();
+        }
+    }, []);
+
     return (
         <>
             <div className="mt-4 flex justify-center">
